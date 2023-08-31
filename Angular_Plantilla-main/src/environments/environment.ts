@@ -5,7 +5,7 @@
 
 export const environment = {
   production: false,
-  url : 'http://localhost:8080/api-main/controllers/'
+  url : 'http://localhost:8080/Parcial2/api-main/controllers/'
 };
 
 //
