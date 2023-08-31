@@ -1,0 +1,59 @@
+<div class="panel-header panel-header-sm">
+</div>
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title"> Lista de Estudiantes</h4>
+          <button type="button" class="btn btn-danger" [routerLink]="['/nuevoestudiante']">Nuevo Estudiante</button>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table">
+              <thead class=" text-primary">
+                <th>
+                  #
+                </th>
+                <th>
+                  Nombre
+                </th>
+                <th>
+                  Apellido
+                </th>
+                <th>
+                  Fecha Ingreso
+                </th>
+                <th>
+                    Carrera
+                </th>
+                <th>
+                    Materia Favorita
+                </th>
+                <th>
+                    Opciones
+                </th>
+              </thead>
+             <tbody>
+                <tr *ngFor="let estudiante of listaestudiantes; let i = index">
+                    <td>{{i + 1 }}</td>
+                    <td>{{ estudiante.nombre }}</td>
+                    <td>{{estudiante.apellido}}</td>
+                    <td>{{ estudiante.fecha_ingreso}}</td>
+                    <td>{{ estudiante.carrera}}</td>
+                    <td>{{ estudiante.materia_favorita_id}}</td>
+                    <td>
+                        <button type="button" class="btn btn-success" [routerLink]="['/editarestudiante/' + estudiante.idEstudiantes]" >Editar</button>
+                        <button type="button" class="btn btn-default" (click)="eliminar(estudiante.idEstudiantes)">Eliminar</button>
+
+                    </td>
+                </tr>
+             </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
