@@ -30,7 +30,7 @@ export class NuevoestudianteComponent implements OnInit {
         // Dentro del método ngOnInit()
 this.materias.todos().subscribe((lista) => {
     this.listaMaterias = lista;
-    console.log(lista);
+   
 });
 
 
